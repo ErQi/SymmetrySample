@@ -27,8 +27,8 @@
         // 设计布局的对齐方式
         symmetry.setLayoutGravity(SymmetryLayout.RIGHT);
 ```
-**效果图**
-![](效果图.png)<br>
+**效果图**</br>
+![](效果图.png)
 
 
 **布局参数**
