@@ -16,14 +16,36 @@
         app:textSizeLeft="12sp"
         app:textSizeRight="18sp"/>
 ```
+```
+        symmetry = (SymmetryLayout) findViewById(R.id.symmetry);
+        // 颜色,位置,大小文字相关属性太多,所以直接不规范的返回对象本体便于炒作了...
+        // 获取左侧的TextView
+        TextView tvLeft = symmetry.getTvLeft();
+        // 获取右侧的TextView
+        TextView tvRight = symmetry.getTvRight();
 
+        // 设计布局的对齐方式
+        symmetry.setLayoutGravity(SymmetryLayout.RIGHT);
+```
 **效果图**
-![](效果图.png)
+![](效果图.png)<br>
 
 
-|属性|类型|默认值|
-|-|-|-|
-| textColorLeft||`left`|
-| gravity|`left`,`right`,`center`|`left`|
-|gravityLeft|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|`left`|
-|gravityRight|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|`left`|
+**布局参数**
+
+|属性|类型|
+|-|-|
+| textLeft|`string`|
+| textRight|`string`|
+| gravity|`left`,`right`,`center`|
+| textColorLeft|`reference`,`color`|
+| textColorRight|`reference`,`color`|
+| textSizeLeft|`dimension`|
+| textSizeRight|`dimension`|
+|gravityLeft|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|
+|gravityRight|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|
+
+**如何引用**
+```
+compile 'com.erqi.le:symmetry:1.0.0'
+```
