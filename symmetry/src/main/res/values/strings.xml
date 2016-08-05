@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">symmetry</string>
+
+    <declare-styleable name="SymmetryLayout">
+        <attr name="textLeft" format="string" localization="suggested"/>
+        <attr name="textRight" format="string" localization="suggested"/>
+        <attr name="textColorLeft" format="reference|color"/>
+        <attr name="textColorRight" format="reference|color"/>
+        <attr name="textSizeLeft" format="dimension"/>
+        <attr name="textSizeRight" format="dimension"/>
+        <attr name="gravityLeft">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="fill_vertical" value="0x70"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="fill_horizontal" value="0x07"/>
+            <flag name="center" value="0x11"/>
+            <flag name="fill" value="0x77"/>
+            <flag name="clip_vertical" value="0x80"/>
+            <flag name="clip_horizontal" value="0x08"/>
+            <flag name="start" value="0x00800003"/>
+            <flag name="end" value="0x00800005"/>
+        </attr>
+        <attr name="gravityRight">
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="fill_vertical" value="0x70"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="fill_horizontal" value="0x07"/>
+            <flag name="center" value="0x11"/>
+            <flag name="fill" value="0x77"/>
+            <flag name="clip_vertical" value="0x80"/>
+            <flag name="clip_horizontal" value="0x08"/>
+            <flag name="start" value="0x00800003"/>
+            <flag name="end" value="0x00800005"/>
+        </attr>
+        <!--效果默认left-->
+        <attr name="gravity">
+            <!--左侧TextView固定,右侧TextView占据剩余空间-->
+            <flag name="left" value="0x01"/>
+            <!--右侧TextView固定,左侧TextView占据剩余空间-->
+            <flag name="right" value="0x02"/>
+            <!--左右TextView各占一半-->
+            <flag name="center" value="0x03"/>
+        </attr>
+    </declare-styleable>
+</resources>
