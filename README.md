@@ -27,23 +27,24 @@
         // 设计布局的对齐方式
         symmetry.setLayoutGravity(SymmetryLayout.RIGHT);
 ```
-**效果图**
-![](效果图.png)<br>
+**效果图**</br>
+![](效果图.png)
 
 
-**布局参数**<br>
+**布局参数**</br>
 
-|属性|类型|
-|-|-|
-| textLeft|`string`|
+ 
+|    属性|    类型|
+|:- | :-|
+| textLeft        |`string`               |
 | textRight|`string`|
 | gravity|`left`,`right`,`center`|
 | textColorLeft|`reference`,`color`|
 | textColorRight|`reference`,`color`|
 | textSizeLeft|`dimension`|
 | textSizeRight|`dimension`|
-|gravityLeft|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|
-|gravityRight|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|
+|gravityLeft|`gravity`|
+|gravityRight|`gravity`|
 
 **如何引用**
 ```
