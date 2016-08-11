@@ -2,6 +2,7 @@ package com.erqi.le.symmetry;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.IntDef;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -54,25 +55,34 @@ public class SymmetryLayout extends LinearLayout {
         mTvRight = (TextView) inflate.findViewById(R.id.tv_right);
         if (attrs != null) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SymmetryLayout);
-            int leftColor = typedArray.getColor(R.styleable.SymmetryLayout_textColorLeft, 0);
-            int rightColor = typedArray.getColor(R.styleable.SymmetryLayout_textColorRight, 0);
-            int leftSize = typedArray.getDimensionPixelSize(R.styleable.SymmetryLayout_textSizeLeft, 0);
-            int rightSize = typedArray.getDimensionPixelSize(R.styleable.SymmetryLayout_textSizeRight, 0);
+            int colorLeft = typedArray.getColor(R.styleable.SymmetryLayout_textColorLeft, 0);
+            int colorRight = typedArray.getColor(R.styleable.SymmetryLayout_textColorRight, 0);
+            int sizeLeft = typedArray.getDimensionPixelSize(R.styleable.SymmetryLayout_textSizeLeft, 0);
+            int sizeRight = typedArray.getDimensionPixelSize(R.styleable.SymmetryLayout_textSizeRight, 0);
             int gravityLeft = typedArray.getInt(R.styleable.SymmetryLayout_gravityLeft, 0);
             int gravityRight = typedArray.getInt(R.styleable.SymmetryLayout_gravityRight, 0);
+            int layoutGravityLeft = typedArray.getInt(R.styleable.SymmetryLayout_layout_gravityLeft, 0);
+            int layoutGravityRight = typedArray.getInt(R.styleable.SymmetryLayout_layout_gravityRight, 0);
             int gravity = typedArray.getInt(R.styleable.SymmetryLayout_gravity, 0);
+            Drawable drawableLeft = typedArray.getDrawable(R.styleable.SymmetryLayout_backgroundLeft);
+            Drawable drawableRight = typedArray.getDrawable(R.styleable.SymmetryLayout_backgroundRight);
 
             mTvLeft.setText(typedArray.getText(R.styleable.SymmetryLayout_textLeft));
             mTvRight.setText(typedArray.getText(R.styleable.SymmetryLayout_textRight));
-            if (leftColor != 0) mTvLeft.setTextColor(leftColor);
-            if (rightColor != 0) mTvRight.setTextColor(rightColor);
-            if (leftSize != 0) mTvLeft.setTextSize(TypedValue.COMPLEX_UNIT_PX, leftSize);
-            if (rightSize != 0) mTvRight.setTextSize(TypedValue.COMPLEX_UNIT_PX, rightSize);
+            if (colorLeft != 0) mTvLeft.setTextColor(colorLeft);
+            if (colorRight != 0) mTvRight.setTextColor(colorRight);
+            if (sizeLeft != 0) mTvLeft.setTextSize(TypedValue.COMPLEX_UNIT_PX, sizeLeft);
+            if (sizeRight != 0) mTvRight.setTextSize(TypedValue.COMPLEX_UNIT_PX, sizeRight);
             if (gravityLeft != 0) mTvLeft.setGravity(gravityLeft);
             if (gravityRight != 0) mTvRight.setGravity(gravityRight);
+            if (layoutGravityLeft != 0)
+                ((LayoutParams) mTvLeft.getLayoutParams()).gravity = layoutGravityLeft;
+            if (layoutGravityRight != 0)
+                ((LayoutParams) mTvRight.getLayoutParams()).gravity = layoutGravityRight;
+            if (drawableLeft != null) mTvLeft.setBackground(drawableLeft);
+            if (drawableRight != null) mTvRight.setBackground(drawableRight);
             if (gravity != 0) {
                 setLayoutGravity(gravity);
-
             }
             typedArray.recycle();
         }

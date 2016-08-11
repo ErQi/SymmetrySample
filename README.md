@@ -4,11 +4,14 @@
 **如何使用**
 ```
     <com.erqi.le.symmetry.SymmetryLayout
+        android:id="@+id/symmetry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:gravity="center"
         app:gravityLeft="right"
         app:gravityRight="left"
+        app:layout_gravityLeft="center_vertical"
+        app:backgroundRight="@color/colorPrimary"
         app:textColorLeft="@color/colorAccent"
         app:textColorRight="@color/colorPrimary"
         app:textLeft="我是左侧固定"
@@ -30,22 +33,7 @@
 **效果图**</br>
 ![](效果图.png)
 
-
-**布局参数**
-
-|属性|类型|
-|-|-|
-| textLeft|`string`|
-| textRight|`string`|
-| gravity|`left`,`right`,`center`|
-| textColorLeft|`reference`,`color`|
-| textColorRight|`reference`,`color`|
-| textSizeLeft|`dimension`|
-| textSizeRight|`dimension`|
-|gravityLeft|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|
-|gravityRight|`top`,`bottom`,`left`,`right`,`center_vertical`,`fill_vertical`,`center_horizontal`,`fill_horizontal`,`center`,`fill`,`clip_vertical`,`clip_horizontal`,`start`,`end`|
-
 **如何引用**
 ```
-compile 'com.erqi.le:symmetry:1.0.0'
+compile 'com.erqi.le:symmetry:1.0.1'
 ```

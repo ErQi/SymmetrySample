@@ -18,6 +18,8 @@
         app:gravity="center"
         app:gravityLeft="right"
         app:gravityRight="left"
+        app:layout_gravityLeft="center_vertical"
+        app:backgroundRight="@color/colorPrimary"
         app:textColorLeft="@color/colorAccent"
         app:textColorRight="@color/colorPrimary"
         app:textLeft="我是左侧固定"

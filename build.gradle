@@ -28,6 +28,6 @@ ext {
     artifactName = 'symmetry'
     artifactDescription = 'Symmetry'
     artifactLabels = ['symmetry']
-    releaseVersionCode = 1
-    releaseVersionName = '1.0.0'
+    releaseVersionCode = 2
+    releaseVersionName = '1.0.1'
 }
