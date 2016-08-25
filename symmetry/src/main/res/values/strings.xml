@@ -8,6 +8,7 @@
         <attr name="textColorRight" format="reference|color"/>
         <attr name="textSizeLeft" format="dimension"/>
         <attr name="textSizeRight" format="dimension"/>
+        <attr name="textLines" format="integer" min="0"/>
         <attr name="gravityLeft">
             <flag name="top" value="0x30"/>
             <flag name="bottom" value="0x50"/>

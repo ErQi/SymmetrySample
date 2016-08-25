@@ -64,6 +64,7 @@ public class SymmetryLayout extends LinearLayout {
             int layoutGravityLeft = typedArray.getInt(R.styleable.SymmetryLayout_layout_gravityLeft, 0);
             int layoutGravityRight = typedArray.getInt(R.styleable.SymmetryLayout_layout_gravityRight, 0);
             int gravity = typedArray.getInt(R.styleable.SymmetryLayout_gravity, 0);
+            int lines = typedArray.getInt(R.styleable.SymmetryLayout_textLines, 0);
             Drawable drawableLeft = typedArray.getDrawable(R.styleable.SymmetryLayout_backgroundLeft);
             Drawable drawableRight = typedArray.getDrawable(R.styleable.SymmetryLayout_backgroundRight);
 
@@ -83,6 +84,10 @@ public class SymmetryLayout extends LinearLayout {
             if (drawableRight != null) mTvRight.setBackground(drawableRight);
             if (gravity != 0) {
                 setLayoutGravity(gravity);
+            }
+            if (lines != 0) {
+                mTvLeft.setMaxLines(lines);
+                mTvRight.setMaxLines(lines);
             }
             typedArray.recycle();
         }
